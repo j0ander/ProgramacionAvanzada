@@ -34,7 +34,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //line.draw();
         //lines.draw();
         //trg.draw();
-        trgs.draw();
+//        trgs.draw();
     }
 
     @Override
@@ -49,16 +49,16 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //line = new Line();
         //trg = new Triangle();
 
-        float[] coordsTrgs = {
-                -0.5f, 0.10f, 0.0f,
-                -0.75f, 0.90f, 0.0f,
-                -0.25f, 0.90f, 0.0f,
-                0.5f, 0.90f, 0.0f,
-                0.25f, 0.10f, 0.0f,
-                0.75f, 0.10f, 0.0f
-        };
-
-        trgs = new Triangles(coordsTrgs) ;
+//        float[] coordsTrgs = {
+//                -0.5f, 0.10f, 0.0f,
+//                -0.75f, 0.90f, 0.0f,
+//                -0.25f, 0.90f, 0.0f,
+//                0.5f, 0.90f, 0.0f,
+//                0.25f, 0.10f, 0.0f,
+//                0.75f, 0.10f, 0.0f
+//        };
+//
+//        trgs = new Triangles(coordsTrgs) ;
 
 //        float[] coords = {
 //                -0.25f, 0.75f, 0.0f,   // Punto 1
