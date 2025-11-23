@@ -7,6 +7,7 @@ import com.programacionavanzada.primitivas.Line;
 import com.programacionavanzada.primitivas.Lines;
 import com.programacionavanzada.primitivas.Point;
 import com.programacionavanzada.primitivas.Points;
+import com.programacionavanzada.primitivas.Square;
 import com.programacionavanzada.primitivas.Triangle;
 import com.programacionavanzada.primitivas.Triangles;
 
@@ -26,6 +27,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private Triangles trgs;
 
+    private Square sq;
+
     @Override
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
@@ -35,6 +38,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //lines.draw();
         //trg.draw();
 //        trgs.draw();
+        sq.draw();
     }
 
     @Override
@@ -50,15 +54,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //trg = new Triangle();
 
 //        float[] coordsTrgs = {
-//                -0.5f, 0.10f, 0.0f,
+//                -0.75f, 0.10f, 0.0f,
 //                -0.75f, 0.90f, 0.0f,
 //                -0.25f, 0.90f, 0.0f,
-//                0.5f, 0.90f, 0.0f,
-//                0.25f, 0.10f, 0.0f,
-//                0.75f, 0.10f, 0.0f
+//                -0.25f, 0.90f, 0.0f,
+//                -0.75f, 0.10f, 0.0f,
+//                -0.25f, 0.10f, 0.0f
 //        };
 //
-//        trgs = new Triangles(coordsTrgs) ;
+//        trgs = new Triangles(coordsTrgs);
 
 //        float[] coords = {
 //                -0.25f, 0.75f, 0.0f,   // Punto 1
@@ -77,6 +81,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 //
 //      lines = new Lines(coordsLinea);
 
+        sq = new Square();
     }
 
     public static int loadShader(int type, String shaderCode) {
