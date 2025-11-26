@@ -3,6 +3,7 @@ package com.programacionavanzada;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 
+import com.programacionavanzada.primitivas.Circle;
 import com.programacionavanzada.primitivas.Line;
 import com.programacionavanzada.primitivas.Lines;
 import com.programacionavanzada.primitivas.Point;
@@ -29,6 +30,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private Square sq;
 
+    private Circle cr;
+
     @Override
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
@@ -38,7 +41,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //lines.draw();
         //trg.draw();
 //        trgs.draw();
-        sq.draw();
+//        sq.draw();
+        cr.draw();
     }
 
     @Override
@@ -81,7 +85,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 //
 //      lines = new Lines(coordsLinea);
 
-        sq = new Square();
+//        sq = new Square();
+        cr = new Circle(0.5f,25);
     }
 
     public static int loadShader(int type, String shaderCode) {
